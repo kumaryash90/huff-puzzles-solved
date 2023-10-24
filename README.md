@@ -4,7 +4,7 @@ Solved:
 
 - [Add1](src/Add1.huff)
 - [CallValue](src/CallValue.huff)
-- [CalldataLength] (src/CalldataLength.huff)
+- [CalldataLength](src/CalldataLength.huff)
 
 ---
 
