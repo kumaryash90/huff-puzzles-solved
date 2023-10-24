@@ -1,3 +1,6 @@
+/**
+ * SOLVED - Oct 24, 2023
+ */
 
 /** 
  *  MULTIPLY HUFF EXERCISE
@@ -13,5 +16,29 @@
 
 
 #define macro MAIN() = takes(0) returns(0) {
+    0x00 calldataload 0xe0 shr
 
+    __FUNC_SIG(multiply) eq mult jumpi
+
+    0x00 0x00 revert
+
+    mult:
+        MULTIPLY()
+}
+
+#define macro MULTIPLY() = takes(0) returns(0) {
+    0x04 calldataload
+    0x24 calldataload
+    
+    dup2 dup2 mul
+    dup1 dup1 0x00 mstore
+
+    0x0 eq correct jumpi
+
+    div eq correct jumpi
+
+    0x00 0x00 revert
+
+    correct:
+        0x20 0x00 return
 }
