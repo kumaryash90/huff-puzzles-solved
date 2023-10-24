@@ -1,7 +1,9 @@
 # huff-puzzles by [RareSkills](https://www.rareskills.io)
 
 Solved:
+
 [Add1](src/Add1.huff)
+[CallValue](src/CallValue.huff)
 
 A series of puzzles that go from very easy to more difficult so that you can have a hands-on introduction to the [huff language](https://huff.sh) and learn EVM bytecode while doing it.
 
