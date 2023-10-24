@@ -1,4 +1,7 @@
-
+/**
+ * SOLVED - Oct 24, 2023
+ */
+ 
 /** 
  *  NON PAYABLE HUFF EXERCISE
  *
@@ -9,5 +12,12 @@
  */
 
 #define macro MAIN() = takes(0) returns(0) {
+    callvalue
+    0x0
+    lt label jumpi
 
+    0x00 0x00 return
+
+    label:
+        0x00 0x00 revert
 }

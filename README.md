@@ -7,6 +7,7 @@ Solved:
 - [CalldataLength](src/CalldataLength.huff)
 - [MyEtherBalance](src/MyEtherBalance.huff)
 - [Multiply](src/Multiply.huff)
+- [NonPayable](src/NonPayable.huff)
 
 ---
 
