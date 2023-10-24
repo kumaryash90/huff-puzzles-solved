@@ -1,8 +1,6 @@
 
 /**
- *
- * SOLVED
- *
+ * SOLVED - Oct 24, 2023
  */
 
 /** 
@@ -28,7 +26,6 @@
 
     add1:
         ADD1()
-    
 }
 
 #define macro ADD1() = takes(0) returns(0) {
