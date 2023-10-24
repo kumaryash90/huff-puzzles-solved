@@ -10,6 +10,7 @@ Solved:
 - [NonPayable](src/NonPayable.huff)
 - [FooBar](src/FooBar.huff)
 - [SimpleStore](src/SimpleStore.huff)
+- [RevertCustom](src/RevertCustom.huff)
 
 ---
 
