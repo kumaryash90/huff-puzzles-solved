@@ -12,6 +12,7 @@ Solved:
 - [SimpleStore](src/SimpleStore.huff)
 - [RevertCustom](src/RevertCustom.huff)
 - [RevertString](src/RevertString.huff)
+- [SumArray](src/SumArray.huff)
 
 ---
 
