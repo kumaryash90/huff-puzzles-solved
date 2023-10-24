@@ -11,6 +11,7 @@ Solved:
 - [FooBar](src/FooBar.huff)
 - [SimpleStore](src/SimpleStore.huff)
 - [RevertCustom](src/RevertCustom.huff)
+- [RevertString](src/RevertString.huff)
 
 ---
 
