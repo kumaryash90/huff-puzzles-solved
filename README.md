@@ -9,6 +9,7 @@ Solved:
 - [Multiply](src/Multiply.huff)
 - [NonPayable](src/NonPayable.huff)
 - [FooBar](src/FooBar.huff)
+- [SimpleStore](src/SimpleStore.huff)
 
 ---
 
