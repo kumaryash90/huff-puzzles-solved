@@ -8,6 +8,7 @@ Solved:
 - [MyEtherBalance](src/MyEtherBalance.huff)
 - [Multiply](src/Multiply.huff)
 - [NonPayable](src/NonPayable.huff)
+- [FooBar](src/FooBar.huff)
 
 ---
 
