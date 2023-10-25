@@ -13,6 +13,7 @@ Solved:
 - [RevertCustom](src/RevertCustom.huff)
 - [RevertString](src/RevertString.huff)
 - [SumArray](src/SumArray.huff)
+- [Keccak](src/Keccak.huff)
 
 ---
 

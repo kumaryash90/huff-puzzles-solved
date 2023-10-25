@@ -1,3 +1,6 @@
+/**
+ * SOLVED - Oct 25, 2023
+ */
 
 /** 
  *  KECCAK HUFF EXERCISE
@@ -9,10 +12,19 @@
 
 
  #define macro MAIN() = takes(0) returns(0) {
-    calldatasize
-    0x00 calldataload
-    sha3
-    0x00 mstore
+    calldatasize 0x00                   // [offset, calldatasize]
 
+    storeInMemory:
+        dup1                            // [offset, offset, calldatasize]
+        calldataload                    // [calldata_at_offset, offset, calldatasize]
+        dup2                            // [offset, calldata_at_offset, offset, calldatasize]
+        mstore                          // [offset, calldatasize]
+        0x20 add                        // [offset, calldatasize]  offset incremented by 32 bytes
+        dup1 dup3                       // [calldatasize, offset, offset, calldatasize]
+        gt storeInMemory jumpi          // [offset, calldatasize]
+
+    pop 0x00                            // [0x00, calldatasize]
+    sha3                                // [hash]
+    0x00 mstore                         // [] hash stored in memory for returning
     0x20 0x00 return
  }
