@@ -1,3 +1,6 @@
+/**
+ * SOLVED - Oct 25, 2023
+ */
 
 /** 
  *  MAX_OF_ARRAY HUFF EXERCISE
@@ -10,5 +13,37 @@
 #define function maxOfArray(uint256[]) payable returns(uint256)
 
 #define macro MAIN() = takes(0) returns(0) {
-   
+   0x00 calldataload 0xe0 shr
+   __FUNC_SIG(maxOfArray) eq getMax jumpi
+
+   0x00 0x00 revert
+
+   getMax:
+        MAX_OF_ARRAY()
+}
+
+#define macro MAX_OF_ARRAY() = takes(0) returns(0) {
+    0x04 calldataload 0x04 add      // [offset]
+    dup1                            // [offset, offset]
+    calldataload                    // [length, offset]
+    dup1 iszero zero jumpi
+
+    checkMax:
+        dup1 iszero done jumpi       // [length, offset]
+        0x1 swap1 sub                // [new_length, offset]
+        swap1 0x20 add swap1 dup2    // [new_offset, new_length, new_offset]
+        calldataload                 // [array_element, new_length, new_offset]
+        0x00 mload                   // [current_max_value, array_element, new_length, new_offset]
+        dup2 gt saveMax jumpi        // [array_element, new_length, new_offset]
+        pop checkMax jump
+    
+    saveMax:
+        0x00 mstore                 // [length, offset]
+        checkMax jump
+
+    done:
+        0x20 0x00 return
+
+    zero: 
+        0x00 0x00 revert
 }

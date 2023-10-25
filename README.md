@@ -14,6 +14,7 @@ Solved:
 - [RevertString](src/RevertString.huff)
 - [SumArray](src/SumArray.huff)
 - [Keccak](src/Keccak.huff)
+- [MaxOfArray](src/MaxOfArray.huff)
 
 ---
 
