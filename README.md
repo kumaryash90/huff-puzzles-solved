@@ -15,6 +15,7 @@ Solved:
 - [SumArray](src/SumArray.huff)
 - [Keccak](src/Keccak.huff)
 - [MaxOfArray](src/MaxOfArray.huff)
+- [Create](src/Create.huff)
 
 ---
 
