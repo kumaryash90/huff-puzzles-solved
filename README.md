@@ -17,6 +17,7 @@ Solved:
 - [MaxOfArray](src/MaxOfArray.huff)
 - [Create](src/Create.huff)
 - [Emitter](src/Emitter.huff)
+- [Donations](src/Donations.huff)
 
 ---
 

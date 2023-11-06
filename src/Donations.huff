@@ -1,3 +1,7 @@
+/**
+ * SOLVED - Nov 06, 2023
+ */
+
 /** 
  *  DONATIONS HUFF EXERCISE
  *  
@@ -8,5 +12,39 @@
 #define function donated(address) payable returns(uint256)
 
 #define macro MAIN() = takes(0) returns(0) {
-    
+    0x00 calldataload 0xe0 shr
+    dup1 __FUNC_SIG(donated) eq donated jumpi
+    0x00000000 eq receive jumpi
+
+    0x00 0x00 revert
+
+    donated:
+        DONATED()
+
+    receive:
+        RECEIVE()
+}
+
+#define macro RECEIVE() = takes(0) returns(0) {
+    caller                  // [caller]
+    0x00 mstore             // [] 
+    0x20 0x00 sha3          // [caller_hash]
+
+    dup1               // [caller_hash, caller_hash]
+    sload              // [stored_value, caller_hash]
+    callvalue          // [callvalue, stored_value, caller_hash]
+    add                // [sum, caller_hash]
+    swap1              // [caller_hash, sum]
+    sstore             // []
+    0x00 0x00 return
+}
+
+#define macro DONATED() = takes(0) returns(0) {
+    0x04 calldataload       // [address]
+    0x00 mstore             // [] 
+    0x20 0x00 sha3          // [address_hash]
+
+    sload              // [stored_value]
+    0x0a mstore
+    0x20 0x0a return
 }
