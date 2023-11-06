@@ -18,6 +18,7 @@ Solved:
 - [Create](src/Create.huff)
 - [Emitter](src/Emitter.huff)
 - [Donations](src/Donations.huff)
+- [SendEther](src/SendEther.huff)
 
 ---
 
