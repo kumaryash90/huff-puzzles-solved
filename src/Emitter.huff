@@ -1,3 +1,7 @@
+/**
+ * SOLVED - Nov 06, 2023
+ */
+
  /** 
  *  EMITTER HUFF EXERCISE
  *  
@@ -13,5 +17,20 @@
 
 
  #define macro MAIN() = takes(0) returns(0) {
-    
+    0x00 calldataload 0xe0 shr
+    dup1 __FUNC_SIG(value) eq value jumpi
+
+    0x00 0x00 revert
+
+    value:
+        VALUE()
+ }
+
+ #define macro VALUE() = takes(0) returns(0) {
+    0x24 calldataload 0x0a mstore
+    0x04 calldataload
+    __EVENT_HASH(Value)
+    0x20
+    0x0a
+    log2
  }

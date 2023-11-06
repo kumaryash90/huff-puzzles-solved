@@ -16,6 +16,7 @@ Solved:
 - [Keccak](src/Keccak.huff)
 - [MaxOfArray](src/MaxOfArray.huff)
 - [Create](src/Create.huff)
+- [Emitter](src/Emitter.huff)
 
 ---
 
